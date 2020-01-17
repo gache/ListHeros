@@ -1,0 +1,12 @@
+<h1 class="text-center"> Heros <small>de Marvel et Dc</small> </h1>
+<hr>
+<div class="card-columns">
+    <div class="card" *ngFor="let heros of herosLocal">
+        <img [src]="heros.img" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 class="card-title text-center"> {{ heros.nom }} </h3>
+            <p class="card-text text-justify"> {{ heros.bio }} </p>
+            <p class="card-text"><small class="text-muted"> {{ heros.editeur }} </small></p>
+            <button class="btn btn-outline-primary btn-block" type="button"> Voir plus</button>
+        </div>
+    </div>
