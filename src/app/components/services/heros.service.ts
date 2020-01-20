@@ -1,8 +1,14 @@
+// Création d’un service de manière manuelle avec les Snnippet est ag-service
+// pour utiliser le service il faut faire l’importation du service dans le dossier app.module.ts
+
 import { Injectable } from '@angular/core';
-import { HerosInterface } from './../../components/interface/interfaceHeros'
+import { HerosInterface } from './../../components/interface/interfaceHeros' // Importation de mon interfece
 
 @Injectable()
 export class HerosService {
+
+
+// Je crée une propriété privée s’appelle heros1. Cette propriété ne peut pas y accéder en dehors de la class ou du service. En plus cette variable heros1 je lui dis que c’est type HerosInterface pour qu'il respecte bien les caractéristique de l'interface.
 
   private heros1: HerosInterface[] = [
     {
@@ -57,11 +63,13 @@ export class HerosService {
   ];
 
   constructor() {
+    // on teste si notre service fonctionne 
     console.log('Service prêt');
 
    }
+   // Je crée une méthode publique pour obtenir les heros et  pour y accéder à l’information de mon service en dehors de celle-ci.
    getHeros(){
-     return this.heros1;
+      return this.heros1 // il fait reference à ma propriété privée heros1
    }
 
 }

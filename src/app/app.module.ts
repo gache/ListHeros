@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-// Routes
+//  Importation de la Route
 import { APPROUTING } from './app.routes';
 
 // Service
@@ -18,6 +18,7 @@ import { HerosComponent } from './components/heros/heros.component';
 
 @NgModule({
   declarations: [
+    //  importation de composant
     AppComponent,
     NavbarComponent,
     HomeComponent,
@@ -26,10 +27,10 @@ import { HerosComponent } from './components/heros/heros.component';
   ],
   imports: [
     BrowserModule,
-    APPROUTING
+    APPROUTING // importation de la Route
   ],
   providers: [
-    HerosService
+    HerosService // importation du Service
   ],
   bootstrap: [AppComponent]
 })
