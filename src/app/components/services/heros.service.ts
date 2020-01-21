@@ -63,13 +63,18 @@ export class HerosService {
   ];
 
   constructor() {
-    // on teste si notre service fonctionne 
-    console.log('Service prêt');
+    // on teste si notre service fonctionne
+    // console.log('Service prêt');
 
    }
    // Je crée une méthode publique pour obtenir les heros et  pour y accéder à l’information de mon service en dehors de celle-ci.
    getHeros(){
       return this.heros1 // il fait reference à ma propriété privée heros1
+   }
+
+   // méthode pour récuperer mon hero avec son Id
+   getHeroSeul(index: string) {
+     return this.heros1[ index ];
    }
 
 }

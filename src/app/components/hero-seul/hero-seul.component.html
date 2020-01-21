@@ -1,0 +1,23 @@
+<h1 class="text-center"> {{ heroS.nom | uppercase }} <small>{{heroS.apparition | date : 'y' }}</small> </h1>
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="heroS.img" class="img-fluid" [alt]="heroS.nom">
+        <br>
+        <br>
+        <a href="" [routerLink]=" ['/heros'] " class="btn btn-outline-danger btn-block">Retourner</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ heroS.nom }}</h3>
+        <br>
+        <p class="text-justify">
+            {{ heroS.bio }}
+        </p>
+        <div>
+            <img *ngIf="heroS.editeur =='Marvel'" class="img-logo" src="assets/img/marvel.jpg" alt="Marvel">
+            <img *ngIf="heroS.editeur =='DC'" class="img-logo" src="assets/img/dc2.png" alt="DC">
+        </div>
+    </div>
+</div>
